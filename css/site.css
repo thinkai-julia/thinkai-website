@@ -552,42 +552,5 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 
 /* ---------- brand-styled "map" (no external Maps API/key — an illustrative street-grid
    panel in brand colors, with a pulsing pin) ---------- */
-.brand-map{
-  position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;
-  background:
-    radial-gradient(circle at 28% 22%, rgba(193,63,224,.32), transparent 58%),
-    radial-gradient(circle at 78% 78%, rgba(139,92,246,.26), transparent 55%),
-    linear-gradient(155deg,#1A0A2E 0%,#3A1958 100%);
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 24px 50px rgba(var(--shadow-c),.2);
-}
-.brand-map::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:
-    repeating-linear-gradient(0deg, rgba(255,255,255,.1) 0 1px, transparent 1px 15.6%),
-    repeating-linear-gradient(90deg, rgba(255,255,255,.1) 0 1px, transparent 1px 15.6%);
-}
-.brand-map::after{
-  content:"";position:absolute;left:-15%;top:58%;width:140%;height:3px;
-  background:linear-gradient(90deg, transparent, rgba(255,255,255,.35) 20%, rgba(255,255,255,.35) 80%, transparent);
-  transform:rotate(-9deg);pointer-events:none;
-}
-.map-pin{position:absolute;left:48%;top:44%;width:30px;height:30px;transform:translate(-50%,-100%);}
-.map-pin .head{
-  position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),var(--accent-soft));
-  border-radius:50% 50% 50% 0;transform:rotate(-45deg);
-  box-shadow:0 0 0 7px rgba(193,63,224,.2), 0 12px 26px rgba(0,0,0,.45);
-}
-.map-pin .ring{
-  position:absolute;left:50%;bottom:-2px;width:13px;height:13px;margin-left:-6.5px;
-  background:rgba(193,63,224,.55);border-radius:50%;
-  animation:pinPulse 2.6s ease-out infinite;
-}
-@keyframes pinPulse{0%{transform:scale(.4);opacity:.9;}100%{transform:scale(3.4);opacity:0;}}
-.map-label{
-  position:absolute;left:16px;bottom:16px;font-family:'IBM Plex Mono',monospace;
-  font-size:.68rem;letter-spacing:.04em;color:rgba(255,255,255,.8);
-  background:rgba(15,9,20,.55);backdrop-filter:blur(4px);
-  padding:7px 11px;border-radius:8px;border:1px solid rgba(255,255,255,.16);
-}
-@media (prefers-reduced-motion: reduce){.map-pin .ring{animation:none;opacity:.5;}}
+.map-embed{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;border:1px solid var(--line);}
+.map-embed iframe{width:100%;height:100%;display:block;}

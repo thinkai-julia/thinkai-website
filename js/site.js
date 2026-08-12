@@ -133,7 +133,12 @@
   if (!reduceMotion) {
     var parallaxEls = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
     if (parallaxEls.length) {
-      var onParallaxScroll = function(){
+      // rAF-gated: a fast fling can fire dozens of scroll events before the next
+      // paint, and each pass does a getBoundingClientRect() per element (up to a
+      // few hundred on services.html) — capping the real work to once per frame
+      // keeps that from turning into visible scroll jank.
+      var parallaxTicking = false;
+      var updateParallax = function(){
         var vh = window.innerHeight;
         parallaxEls.forEach(function(el){
           var factor = parseFloat(el.getAttribute('data-parallax')) || 0.1;
@@ -141,9 +146,16 @@
           var centerOffset = (rect.top + rect.height/2) - vh/2;
           el.style.setProperty('--py', (centerOffset * -factor * 0.15) + 'px');
         });
+        parallaxTicking = false;
+      };
+      var onParallaxScroll = function(){
+        if (!parallaxTicking) {
+          requestAnimationFrame(updateParallax);
+          parallaxTicking = true;
+        }
       };
       document.addEventListener('scroll', onParallaxScroll, {passive:true});
-      onParallaxScroll();
+      updateParallax();
     }
   }
 
@@ -161,9 +173,10 @@
     });
   }
 
-  // No backend on a static mockup, so "send" means handing off to the visitor's own
-  // mail client via mailto: — pre-filled and addressed to ThinkAI, one click from sent.
+  // Static site, no backend of our own — Web3Forms receives the POST and relays it
+  // to CONTACT_EMAIL as a real email, no mail client required on the visitor's end.
   var CONTACT_EMAIL = 'thinkai.julia@gmail.com';
+  var WEB3FORMS_KEY = 'feae7f1a-dedf-42d8-a0a3-9b79f419c977';
 
   document.querySelectorAll('.real-form').forEach(function(form){
     form.addEventListener('submit', function(e){
@@ -191,15 +204,34 @@
 
       var pageName = document.title.split('|')[0].trim() || 'ThinkAI';
       var subject = 'Strategy call request — ' + pageName + ' page';
-      var mailto = 'mailto:' + CONTACT_EMAIL
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(lines.join('\n'));
+      var nameField = form.querySelector('input[name="fullName"]');
+      var emailField = form.querySelector('input[type="email"]');
 
       var success = form.parentElement.querySelector('.form-success');
-      form.style.display = 'none';
-      if (success) success.classList.add('show');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalBtnText = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
 
-      window.location.href = mailto;
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          to: CONTACT_EMAIL,
+          subject: subject,
+          from_name: (nameField && nameField.value) || 'ThinkAI website',
+          email: (emailField && emailField.value) || undefined,
+          message: lines.join('\n'),
+          page: window.location.href
+        })
+      }).then(function(r){ return r.json(); }).then(function(data){
+        if (!data.success) throw new Error(data.message || 'Submission failed');
+        form.style.display = 'none';
+        if (success) success.classList.add('show');
+      }).catch(function(){
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
+        alert('Something went wrong sending your request. Please email us directly at ' + CONTACT_EMAIL + ' or try again.');
+      });
     });
   });
 })();
