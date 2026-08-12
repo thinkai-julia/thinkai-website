@@ -268,7 +268,7 @@ section.tight{padding:56px 0;}
 .img-slot.wide{aspect-ratio:21/9;}
 .img-slot.filled{border-style:solid;border-color:rgba(255,255,255,.14);background:none;padding:0;overflow:hidden;}
 .band.light .img-slot.filled{border-color:rgba(24,15,36,.1);}
-.img-slot.filled img{width:100%;height:100%;object-fit:cover;display:block;}
+.img-slot.filled img,.img-slot.filled video{width:100%;height:100%;object-fit:cover;display:block;}
 
 /* large tech motifs (gears, circuit/microchip traces) — the "AI" counterweight to the watercolor softness */
 .tech-decor{position:absolute;z-index:0;pointer-events:none;opacity:.5;filter:drop-shadow(0 0 30px rgba(193,63,224,.25));}
