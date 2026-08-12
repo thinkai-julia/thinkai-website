@@ -347,6 +347,11 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .grid-3{grid-template-columns:repeat(3,1fr);}
 .grid-4{grid-template-columns:repeat(4,1fr);}
 @media (max-width:860px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+/* on the services overview page, alternating left/right image placement
+   (for desktop visual rhythm) means two img-slots can land back-to-back
+   once grid-2 collapses to one column on mobile; force text first, image
+   second every time so images never stack directly on each other. */
+@media (max-width:860px){.svc-split .img-slot{order:2;}}
 /* grid-4 gets a 2-column tablet stop instead of jumping straight to 1 —
    four short cards (or eight service cards) read cleanly as 2x2 or 4x2,
    never as an odd 3-then-remainder split. */
