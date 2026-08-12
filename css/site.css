@@ -156,7 +156,13 @@ section.tight{padding:56px 0;}
 .hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
 .hero-scrim{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg, rgba(15,9,20,.58) 0%, rgba(20,10,32,.32) 42%, rgba(13,8,20,.8) 100%);
+  /* two soft layers: a left-side wash sitting behind where the text column
+     actually lives (text is left-aligned within the centered .wrap), plus
+     the original top/bottom vignette — both gradients, no hard edges, so
+     the video still reads clearly on the right and at the vertical center. */
+  background:
+    linear-gradient(100deg, rgba(8,4,14,.62) 0%, rgba(8,4,14,.34) 38%, rgba(8,4,14,0) 66%),
+    linear-gradient(180deg, rgba(15,9,20,.46) 0%, rgba(20,10,32,.22) 42%, rgba(13,8,20,.72) 100%);
 }
 .hero-content{position:relative;z-index:2;color:#fff;}
 .hero-content .eyebrow{color:var(--blush);}
@@ -343,7 +349,12 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .grid-2{grid-template-columns:repeat(2,1fr);}
 .grid-3{grid-template-columns:repeat(3,1fr);}
 .grid-4{grid-template-columns:repeat(4,1fr);}
-@media (max-width:860px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+@media (max-width:860px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+/* grid-4 gets a 2-column tablet stop instead of jumping straight to 1 —
+   four short cards (or eight service cards) read cleanly as 2x2 or 4x2,
+   never as an odd 3-then-remainder split. */
+@media (max-width:860px){.grid-4{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:520px){.grid-4{grid-template-columns:1fr;}}
 
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;
@@ -392,9 +403,13 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 
 /* ---------- flow diagram: linear pipeline of connected steps (call flows,
    ad funnels, pipelines) — a horizontal chain on desktop, stacked on mobile ---------- */
-.flow-diagram{display:flex;align-items:stretch;gap:0;margin-top:32px;flex-wrap:wrap;position:relative;z-index:1;}
+.flow-diagram{display:flex;align-items:stretch;gap:0;margin-top:32px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
 .flow-diagram .flow-step{
-  flex:1 1 150px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  /* fixed (non-growing) basis: with flex-grow a lone item wrapped onto its own
+     row stretches to fill the entire row width — jarring next to the evenly
+     sized cards above it. A capped basis keeps every card the same size
+     whether the row is full or not. */
+  flex:0 1 190px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
   border-radius:14px;padding:20px 18px;min-width:0;
 }
 .flow-diagram .flow-step .n{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;}
