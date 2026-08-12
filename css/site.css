@@ -798,3 +798,31 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 .split-cols .sc-col ul{list-style:none;margin:14px 0 0;padding:0;}
 .split-cols .sc-col li{padding:5px 0;font-size:.92rem;color:var(--band-fg-soft);}
 .band.light .split-cols .sc-col{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
+
+/* ---------- branch diagram: one idea expanding into many formats (Social
+   Media) — a single-direction tree, visually distinct from the Chat page's
+   converge-then-diverge network. ---------- */
+.branch-diagram{max-width:600px;margin:32px auto 0;text-align:center;position:relative;z-index:1;}
+.branch-diagram .branch-root{max-width:340px;margin:0 auto;background:linear-gradient(120deg,var(--accent),var(--accent-soft));color:#fff;border-radius:16px;padding:16px 24px;font-family:'Fraunces',serif;font-weight:600;font-size:1.02rem;box-shadow:0 16px 34px rgba(193,63,224,.28);}
+.branch-diagram .branches{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px;}
+
+/* ---------- content engine: a wrapped chain with a loop-back marker instead
+   of a straight line — the cyclical "insight to next idea" process unique to
+   Social Media. ---------- */
+.content-engine{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;justify-content:center;position:relative;z-index:1;}
+.content-engine .ce-step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 18px;text-align:center;flex:0 1 128px;}
+.content-engine .ce-step .n{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.04em;color:var(--accent);text-transform:uppercase;}
+.content-engine .ce-step h4{margin-top:6px;font-size:.88rem;}
+.content-engine .ce-loop{flex-basis:100%;text-align:center;margin-top:6px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--band-fg-soft);}
+.content-engine .ce-loop .arrow{color:var(--accent);margin:0 6px;}
+.band.light .content-engine .ce-step{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
+
+/* ---------- week calendar: a five-day content example, unique to Social
+   Media's "one idea becomes a week" demonstration. ---------- */
+.week-cal{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:28px;position:relative;z-index:1;}
+@media (max-width:860px){.week-cal{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:520px){.week-cal{grid-template-columns:1fr;}}
+.week-cal .day{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px;min-width:0;}
+.week-cal .day .dow{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);}
+.week-cal .day h4{margin-top:8px;font-size:.9rem;}
+.band.light .week-cal .day{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
