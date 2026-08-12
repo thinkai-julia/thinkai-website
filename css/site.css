@@ -253,6 +253,8 @@ section.tight{padding:56px 0;}
 }
 .band.light .img-slot{border-color:rgba(24,15,36,.22);background:rgba(255,255,255,.4);color:#8C7F98;}
 .img-slot.wide{aspect-ratio:21/9;}
+.img-slot.tall{aspect-ratio:auto;align-self:stretch;min-height:100%;}
+@media (max-width:860px){.img-slot.tall{aspect-ratio:3/4;min-height:0;}}
 .img-slot.filled{border-style:solid;border-color:rgba(255,255,255,.14);background:none;padding:0;overflow:hidden;}
 .band.light .img-slot.filled{border-color:rgba(24,15,36,.1);}
 .img-slot.filled img,.img-slot.filled video{width:100%;height:100%;object-fit:cover;display:block;}
@@ -423,7 +425,8 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .flow-diagram.cols-5{grid-template-columns:repeat(5,1fr);}
 .flow-diagram.cols-center{display:flex;flex-wrap:wrap;justify-content:center;}
 .flow-diagram.cols-center .flow-step{flex:0 1 250px;}
-@media (max-width:860px){.flow-diagram,.flow-diagram.cols-3,.flow-diagram.cols-5{grid-template-columns:1fr;}.flow-diagram.cols-center .flow-step{flex-basis:100%;}}
+.flow-diagram.cols-3-2{grid-template-columns:repeat(3,1fr);}
+@media (max-width:860px){.flow-diagram,.flow-diagram.cols-3,.flow-diagram.cols-5,.flow-diagram.cols-3-2{grid-template-columns:1fr;}.flow-diagram.cols-center .flow-step{flex-basis:100%;}}
 .flow-diagram .flow-step{
   background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
   border-radius:14px;padding:20px 18px;min-width:0;
@@ -485,10 +488,11 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 
 /* ---------- integration row: small pill badges for what a system plugs into,
    lighter-weight than a full card grid so it doesn't compete with the main flow. ---------- */
-.integration-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;position:relative;z-index:1;}
-.integration-chip{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:11px 22px 11px 16px;font-size:.92rem;font-weight:600;}
+.integration-row{display:grid;grid-template-columns:repeat(3,1fr);justify-items:start;gap:14px;margin-top:28px;position:relative;z-index:1;}
+@media (max-width:700px){.integration-row{grid-template-columns:1fr;}}
+.integration-chip{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:11px 22px 11px 16px;font-size:.92rem;font-weight:600;color:var(--band-fg);}
 .integration-chip .n{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--accent);}
-.band.light .integration-chip{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
+.band.light .integration-chip{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);color:#0A060F;}
 
 /* ---------- FAQ: native <details>/<summary> so the accordion works with zero JS
    and is keyboard/screen-reader accessible by default. ---------- */
@@ -634,6 +638,10 @@ table.compare td.hl{color:var(--accent);font-weight:700;}
 .band .card.on-black:hover, .band .service-card.on-black:hover{border-color:var(--accent);box-shadow:0 18px 40px rgba(0,0,0,.5);}
 .band .service-card.on-black .tag{color:var(--blush);}
 .band .service-card .tag{color:var(--blush);}
+/* blush reads fine on dark bands but drops to ~2.8:1 on the near-white
+   .band.light background — restore the higher-contrast accent purple
+   for plain (non on-black/on-white) service-cards in a light band. */
+.band.light .service-card .tag{color:var(--accent);}
 
 /* form-module gets the same paint-blot washes as .band, no photographic overlay */
 .form-module{position:relative;overflow:hidden;}
@@ -834,13 +842,15 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 /* ---------- content engine: a wrapped chain with a loop-back marker instead
    of a straight line — the cyclical "insight to next idea" process unique to
    Social Media. ---------- */
-.content-engine{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;justify-content:center;position:relative;z-index:1;}
-.content-engine .ce-step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 18px;text-align:center;flex:0 1 128px;}
+.content-engine{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px;position:relative;z-index:1;}
+.content-engine .ce-step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 18px;text-align:center;min-width:0;}
 .content-engine .ce-step .n{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.04em;color:var(--accent);text-transform:uppercase;}
 .content-engine .ce-step h4{margin-top:6px;font-size:.88rem;}
-.content-engine .ce-loop{flex-basis:100%;text-align:center;margin-top:6px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--band-fg-soft);}
+.content-engine .ce-loop{grid-column:1/-1;text-align:center;margin-top:6px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--band-fg-soft);}
 .content-engine .ce-loop .arrow{color:var(--accent);margin:0 6px;}
 .band.light .content-engine .ce-step{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
+.band.light .content-engine .ce-loop{color:#8C7F98;}
+@media (max-width:860px){.content-engine{grid-template-columns:1fr;}}
 
 /* ---------- week calendar: a five-day content example, unique to Social
    Media's "one idea becomes a week" demonstration. ---------- */
@@ -855,15 +865,18 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 /* ---------- leaky pipeline: a vertical descent where each step reads as
    friction/loss, ending in a dead stop — Sales Automation's "where momentum
    gets lost" visual, distinct from the neutral .vert-flow used for Chat. ---------- */
-.leak-flow{max-width:460px;margin:28px auto 0;position:relative;z-index:1;}
-.leak-flow .lf-step{display:flex;align-items:baseline;gap:14px;padding:9px 0;}
-.leak-flow .lf-step .lf-label{font-weight:700;font-size:.86rem;flex:none;min-width:150px;}
-.leak-flow .lf-step .lf-loss{font-size:.86rem;color:var(--band-fg-soft);}
-.leak-flow .lf-line{width:1px;height:16px;background:rgba(255,255,255,.12);margin-left:3px;}
-.leak-flow .lf-end{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.18);font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);text-align:center;}
-.band.light .leak-flow .lf-loss{color:#544963;}
-.band.light .leak-flow .lf-line{background:rgba(24,15,36,.1);}
-.band.light .leak-flow .lf-end{border-color:rgba(24,15,36,.15);}
+.leak-flow{max-width:520px;margin:32px auto 0;position:relative;z-index:1;}
+.leak-flow .lf-step{position:relative;display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:12px 0 12px 28px;}
+.leak-flow .lf-step::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(193,63,224,.14);}
+.leak-flow .lf-step .lf-label{font-weight:700;font-size:.9rem;flex:none;min-width:150px;}
+.leak-flow .lf-step .lf-loss{font-size:.78rem;color:var(--band-fg-soft);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 14px;}
+.leak-flow .lf-line{width:1px;height:18px;margin-left:5.5px;background:linear-gradient(rgba(255,255,255,.24),rgba(255,255,255,0));}
+.leak-flow .lf-end{margin-top:18px;padding:18px;border-radius:14px;background:rgba(255,255,255,.04);border:1px dashed var(--accent-soft);font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-align:center;}
+.band.light .leak-flow .lf-step::before{box-shadow:0 0 0 4px rgba(193,63,224,.1);}
+.band.light .leak-flow .lf-loss{color:#544963;background:rgba(24,15,36,.03);border-color:rgba(24,15,36,.09);}
+.band.light .leak-flow .lf-line{background:linear-gradient(rgba(24,15,36,.2),rgba(24,15,36,0));}
+.band.light .leak-flow .lf-end{background:rgba(24,15,36,.03);border-color:var(--accent-soft);}
+@media (max-width:520px){.leak-flow .lf-step .lf-label{min-width:0;}}
 
 /* ---------- dual-layer pipeline: each stage shows both the automated action
    and the human action side by side — the signature diagram for Sales
