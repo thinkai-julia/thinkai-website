@@ -10,18 +10,18 @@
   // only applies to top-level links: the dropdown's "Overview" shares href="services.html"
   // with the parent and must only light up when it IS the current page.
   (function highlightActiveNav(){
-    var last = location.pathname.split('/').pop();
-    var currentPage = last && last.length ? last : 'index.html';
-    var isServiceSubpage = /^service-/.test(currentPage);
+    function norm(p){ return p.replace(/\/+$/, '') || '/'; }
+    var path = norm(location.pathname);
+    var isServiceSubpage = /^\/services\/[^/]+$/.test(path);
     var topLevel = document.querySelectorAll('.site-header nav > a, .nav-services > a, .mobile-panel a:not(.btn)');
     topLevel.forEach(function(a){
-      var href = a.getAttribute('href');
-      if (href === currentPage || (isServiceSubpage && href === 'services.html')){
+      var href = norm(a.getAttribute('href'));
+      if (href === path || (isServiceSubpage && href === '/services')){
         a.classList.add('active');
       }
     });
     document.querySelectorAll('.nav-services .dropdown a').forEach(function(a){
-      if (a.getAttribute('href') === currentPage) a.classList.add('active');
+      if (norm(a.getAttribute('href')) === path) a.classList.add('active');
     });
   })();
 
@@ -55,7 +55,7 @@
     var v = blotVariants[Math.floor(Math.random() * blotVariants.length)];
     var el = document.createElement('img');
     el.className = 'splash-decor' + (Math.random() < 0.5 ? ' soft' : '');
-    el.src = 'assets/img/splash-' + (v < 10 ? '0' + v : v) + '.png';
+    el.src = '/assets/img/splash-' + (v < 10 ? '0' + v : v) + '.png';
     el.alt = '';
     el.style.position = 'absolute';
     el.style.width = Math.floor(biasedRand(minPx, maxPx, 2.2)) + 'px';
@@ -88,7 +88,7 @@
         var img = document.createElement('img');
         img.className = 'splash-decor' + (isStroke ? ' stroke' : '') + (Math.random() < 0.55 ? ' soft' : '');
         img.setAttribute('data-parallax', rand(0.04, 0.17).toFixed(2));
-        img.src = 'assets/img/splash-' + (v < 10 ? '0' + v : v) + '.png';
+        img.src = '/assets/img/splash-' + (v < 10 ? '0' + v : v) + '.png';
         img.alt = '';
         img.style.position = 'absolute';
         img.style.top = (anchor.top + rand(-2.5, 2.5)).toFixed(1) + '%';
