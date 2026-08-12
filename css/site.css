@@ -361,6 +361,21 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .service-card p{color:var(--soft);font-size:.92rem;}
 .service-card .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:700;margin-top:14px;display:block;}
 
+/* ---------- growth system: clusters the 8 existing services into the
+   attract / convert / operate stages of one funnel, always used inside a
+   dark .band (no light-band variant needed — see .service-card.on-black
+   for why hardcoded dark-context colors are safe here). ---------- */
+.growth-system{margin-top:36px;}
+.gs-stage{padding:26px 0;border-top:1px solid rgba(255,255,255,.14);}
+.gs-stage:first-child{border-top:none;padding-top:0;}
+.gs-stage-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:18px;}
+.gs-label{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+.gs-stage-head p{color:var(--band-fg-soft);font-size:.95rem;margin:0;}
+.gs-services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+.gs-arrow{text-align:center;font-size:1.2rem;color:var(--band-fg-soft);opacity:.5;}
+.gs-connector{margin-top:40px;display:flex;align-items:center;justify-content:center;gap:16px;font-family:'Fraunces',serif;font-size:clamp(1.1rem,2.6vw,1.7rem);font-weight:600;color:var(--band-fg);text-align:center;flex-wrap:wrap;}
+.gs-x{color:var(--accent);font-size:1.15em;}
+
 .feature-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
 .feature-list li{display:flex;gap:10px;font-size:.96rem;color:var(--soft);}
 .feature-list li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:9px;flex:none;}
