@@ -800,17 +800,27 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 .band.light .roadmap-step .rm-n{background:rgba(24,15,36,.04);}
 .band.light .roadmap-step p{color:#544963;}
 
-/* ---------- question list: editorial statement-style list, distinct from
-   the FAQ accordion — not clickable, just a rhythm of short serif lines. ---------- */
-.question-list{list-style:none;margin:28px 0 0;padding:0;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;column-gap:56px;}
-.question-list li{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:500;padding:16px 0;border-bottom:1px solid var(--line);}
-.question-list li:first-child,.question-list li:nth-child(5){padding-top:0;}
-.question-list li:nth-child(4),.question-list li:last-child{border-bottom:none;}
-@media (max-width:760px){
-  .question-list{display:block;}
-  .question-list li:nth-child(5){padding-top:16px;}
-  .question-list li:nth-child(4){border-bottom:1px solid var(--line);}
+/* ---------- question grid: an index-card wall, each tile carrying an
+   oversized ghost "?" watermark — distinct from the roadmap's spine+circle
+   treatment and the numbered-deliverables index elsewhere on this same
+   page, so the two 8-item lists don't read as the same component twice. ---------- */
+.question-grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:32px 0 0;padding:0;position:relative;z-index:1;}
+.question-grid li{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;
+  padding:24px 20px 20px;position:relative;overflow:hidden;min-width:0;
+  transition:transform .3s ease,border-color .3s ease;
 }
+.question-grid li:hover{transform:translateY(-4px);border-color:var(--accent-soft);}
+.question-grid li::before{
+  content:"?";font-family:'Fraunces',serif;font-weight:600;font-size:3.4rem;line-height:1;
+  position:absolute;top:-8px;right:8px;color:rgba(255,255,255,.07);pointer-events:none;
+}
+.question-grid li p{font-family:'Fraunces',serif;font-size:1rem;font-weight:500;line-height:1.4;position:relative;z-index:1;margin:0;}
+.band.light .question-grid li{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
+.band.light .question-grid li::before{color:rgba(24,15,36,.06);}
+.band.light .question-grid li p{color:#0A060F;}
+@media (max-width:980px){.question-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:600px){.question-grid{grid-template-columns:1fr;}}
 
 /* ---------- numbered deliverables: large serif index numbers instead of
    checkmarks or cards, for a "strategic outputs" feel. ---------- */
