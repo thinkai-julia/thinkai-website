@@ -283,4 +283,27 @@
       });
     });
   })();
+
+  // Back-to-top: same button on every page, injected here so it never needs
+  // touching markup on 13 separate files. Left side on purpose — Tawk.to's
+  // widget already sits bottom-right.
+  (function(){
+    var btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.innerHTML = '&uarr;';
+    document.body.appendChild(btn);
+
+    var toggle = function(){
+      if (window.scrollY > 700) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    };
+    window.addEventListener('scroll', toggle, {passive:true});
+    toggle();
+
+    btn.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  })();
 })();

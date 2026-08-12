@@ -926,4 +926,18 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 
 .faq-cat-block{margin-top:36px;}
 .faq-cat-block:first-of-type{margin-top:0;}
+
+/* ---------- back-to-top: injected by site.js on every page. Left side on
+   purpose — Tawk.to's bubble already owns the bottom-right corner. ---------- */
+.back-to-top{
+  position:fixed;left:22px;bottom:22px;z-index:80;width:46px;height:46px;border-radius:50%;
+  background:var(--accent);color:#fff;border:none;cursor:pointer;font-size:1.15rem;line-height:1;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.28);
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .25s ease,transform .25s ease,visibility .25s,background .2s ease;
+}
+.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0);}
+.back-to-top:hover{background:var(--accent-soft);}
+@media (max-width:600px){.back-to-top{left:14px;bottom:14px;width:42px;height:42px;}}
+@media (prefers-reduced-motion: reduce){.back-to-top{transition:none;}}
 .faq-cat-label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block;}
