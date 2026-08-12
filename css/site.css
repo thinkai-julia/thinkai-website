@@ -17,26 +17,13 @@
   --tag-bg:rgba(193,63,224,0.08);
   --shadow-c:0,0,0;
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --paper:#050308;
-    --mist:#1D1530;
-    --card:#161020;
-    --ink:#FFFFFF;
-    --soft:#C4B9D3;
-    --faint:#8F82A3;
-    --accent:#D66FEF;
-    --accent-soft:#B855DE;
-    --blush:#E7A9CC;
-    --eggplant:#000000;
-    --line:rgba(255,255,255,0.14);
-    --band-bg:linear-gradient(155deg,#000000 0%,#150E24 55%,#361A47 100%);
-    --band-fg:#FFFFFF;
-    --band-fg-soft:rgba(255,255,255,0.68);
-    --tag-bg:rgba(214,111,239,0.14);
-    --shadow-c:0,0,0;
-  }
-}
+/* Intentionally no @media (prefers-color-scheme: dark) override: every
+   section on this site already declares its own light/dark treatment
+   explicitly (.band vs .band.light), with literal colors chosen to match.
+   Letting the OS theme silently swap the base tokens on top of that
+   caused real dark-text-on-dark-background breakage in components that
+   still referenced the adaptive tokens (e.g. .demo-card, related-service
+   lists) instead of the explicit band colors. */
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
