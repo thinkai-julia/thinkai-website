@@ -476,6 +476,27 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .integration-chip .n{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--accent);}
 .band.light .integration-chip{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
 
+/* ---------- FAQ: native <details>/<summary> so the accordion works with zero JS
+   and is keyboard/screen-reader accessible by default. ---------- */
+.faq-list{max-width:760px;margin-top:28px;position:relative;z-index:1;}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0;}
+.faq-item summary{cursor:pointer;font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink);}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";font-family:'IBM Plex Mono',monospace;color:var(--accent);font-size:1.3rem;flex:none;transition:transform .2s ease;line-height:1;}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-item p{margin:12px 0 0;color:var(--soft);font-size:.94rem;line-height:1.6;max-width:640px;}
+.band.flat .faq-item summary{color:var(--band-fg);}
+.band.flat .faq-item p{color:var(--band-fg-soft);}
+.band.flat .faq-item{border-color:rgba(255,255,255,.14);}
+
+/* ---------- demo card: lighter-weight service-card variant for "see an example"
+   links, with a small status tag instead of the full service-card treatment. ---------- */
+.demo-card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;}
+.demo-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(var(--shadow-c),0.12);border-color:var(--accent-soft);}
+.demo-card h4{font-size:1rem;margin-top:10px;}
+.demo-card p{color:var(--soft);font-size:.88rem;margin-top:6px;}
+.demo-card .tag{margin-top:14px;display:inline-block;font-size:.82rem;color:var(--accent);font-weight:600;}
+
 .table-wrap{overflow-x:auto;}
 table.compare{width:100%;border-collapse:collapse;margin-top:10px;}
 table.compare th,table.compare td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem;}
