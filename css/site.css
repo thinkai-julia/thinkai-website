@@ -879,3 +879,25 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 .photo-band .pb-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,3,8,.82) 0%,rgba(5,3,8,.5) 55%,rgba(5,3,8,.2) 100%);}
 .photo-band .wrap{position:relative;z-index:2;}
 @media (max-width:700px){.photo-band{min-height:460px;}.photo-band .pb-scrim{background:linear-gradient(180deg,rgba(5,3,8,.4) 0%,rgba(5,3,8,.85) 65%);}}
+
+/* ---------- FAQ page: category nav, short-answer intro, and a lighter
+   inline conversion block distinct from the final form CTA. ---------- */
+.cat-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;position:relative;z-index:1;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;}
+.cat-nav a{flex:none;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:9px 18px;font-size:.82rem;font-weight:600;color:var(--band-fg);text-decoration:none;white-space:nowrap;transition:border-color .2s ease,background .2s ease;}
+.cat-nav a:hover{border-color:var(--accent-soft);background:rgba(255,255,255,.09);}
+.band.light .cat-nav a{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.12);color:var(--ink);}
+.band.light .cat-nav a:hover{background:rgba(24,15,36,.07);border-color:var(--accent-soft);}
+
+.short-answer{max-width:720px;position:relative;z-index:1;}
+.short-answer .sa-big{font-family:'Fraunces',serif;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:500;line-height:1.35;margin-top:18px;}
+.short-answer .sa-big em{color:var(--accent);font-style:normal;}
+
+.inline-cta{max-width:640px;margin:0 auto;text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px 32px;position:relative;z-index:1;}
+.inline-cta h3{font-size:1.15rem;}
+.inline-cta p{margin-top:8px;color:var(--band-fg-soft);font-size:.92rem;}
+.inline-cta .btn-text{margin-top:14px;}
+.band.light .inline-cta{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.12);}
+
+.faq-cat-block{margin-top:36px;}
+.faq-cat-block:first-of-type{margin-top:0;}
+.faq-cat-label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block;}
