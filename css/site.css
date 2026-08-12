@@ -782,10 +782,15 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 
 /* ---------- question list: editorial statement-style list, distinct from
    the FAQ accordion — not clickable, just a rhythm of short serif lines. ---------- */
-.question-list{list-style:none;margin:28px 0 0;padding:0;max-width:720px;position:relative;z-index:1;}
+.question-list{list-style:none;margin:28px 0 0;padding:0;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;column-gap:56px;}
 .question-list li{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:500;padding:16px 0;border-bottom:1px solid var(--line);}
-.question-list li:first-child{padding-top:0;}
-.question-list li:last-child{border-bottom:none;}
+.question-list li:first-child,.question-list li:nth-child(5){padding-top:0;}
+.question-list li:nth-child(4),.question-list li:last-child{border-bottom:none;}
+@media (max-width:760px){
+  .question-list{display:block;}
+  .question-list li:nth-child(5){padding-top:16px;}
+  .question-list li:nth-child(4){border-bottom:1px solid var(--line);}
+}
 
 /* ---------- numbered deliverables: large serif index numbers instead of
    checkmarks or cards, for a "strategic outputs" feel. ---------- */
