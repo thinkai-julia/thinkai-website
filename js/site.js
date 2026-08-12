@@ -228,10 +228,59 @@
         if (!data.success) throw new Error(data.message || 'Submission failed');
         form.style.display = 'none';
         if (success) success.classList.add('show');
+        if (window.thinkaiTrack) window.thinkaiTrack('form_submit', { page: window.location.pathname });
       }).catch(function(){
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
         alert('Something went wrong sending your request. Please email us directly at ' + CONTACT_EMAIL + ' or try again.');
       });
     });
   });
+
+  // Conversion event hooks — pushes to window.dataLayer, the convention GTM/GA4
+  // already listen for, so wiring up real analytics later is a config change,
+  // not another pass through the markup. No tracking IDs are set up here.
+  (function(){
+    window.dataLayer = window.dataLayer || [];
+    function track(event, data){
+      var payload = { event: event };
+      for (var k in data) if (data.hasOwnProperty(k)) payload[k] = data[k];
+      window.dataLayer.push(payload);
+    }
+    window.thinkaiTrack = track;
+
+    document.addEventListener('click', function(e){
+      var telLink = e.target.closest('a[href^="tel:"]');
+      if (telLink) { track('phone_click', { href: telLink.getAttribute('href') }); return; }
+
+      var mailLink = e.target.closest('a[href^="mailto:"]');
+      if (mailLink) { track('email_click', { href: mailLink.getAttribute('href') }); return; }
+
+      var demo = e.target.closest('.demo-card');
+      if (demo) {
+        var demoLabel = demo.querySelector('h4');
+        track('demo_click', { label: demoLabel ? demoLabel.textContent.trim() : '' });
+        return;
+      }
+
+      var cta = e.target.closest('.btn, .btn-ghost, .btn-text, .header-cta');
+      if (cta) {
+        var href = cta.getAttribute('href') || '';
+        var isStrategyCall = href === '/contact.html' || href === '#get-started' || href.indexOf('/contact.html') === 0;
+        track(isStrategyCall ? 'strategy_call_click' : 'cta_click', {
+          label: cta.textContent.trim(),
+          href: href,
+          page: window.location.pathname
+        });
+      }
+    });
+
+    document.querySelectorAll('.real-form').forEach(function(form){
+      var started = false;
+      form.addEventListener('focusin', function(){
+        if (started) return;
+        started = true;
+        track('form_start', { page: window.location.pathname });
+      });
+    });
+  })();
 })();
