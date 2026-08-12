@@ -515,6 +515,9 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 @media (max-width:700px){.mock-metrics{grid-template-columns:repeat(2,1fr);}}
 .band.light .mock-dashboard{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
 .band.light .mock-metric{background:rgba(24,15,36,.03);}
+.band.light .mock-dashboard-head .tag-label{color:#544963;}
+.band.light .mock-metric .lbl{color:#544963;}
+.band.light .mock-metric .trend{color:#1a9a52;}
 
 /* ---------- before / after: two-card comparison for a literal transformation
    (same site, two states), distinct from .compare which argues template vs
@@ -534,6 +537,7 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .band.light .ba-col.before{background:rgba(24,15,36,.03);}
 .band.light .ba-col.after{background:rgba(193,63,224,.06);}
 .band.light .ba-col li{border-color:rgba(24,15,36,.08);color:#544963;}
+.band.light .ba-col.before .tag-label{color:#544963;}
 
 .table-wrap{overflow-x:auto;}
 table.compare{width:100%;border-collapse:collapse;margin-top:10px;}
@@ -599,6 +603,9 @@ table.compare td.hl{color:var(--accent);font-weight:700;}
 .band .card h4, .band .service-card h3{color:#fff;}
 .band .card p, .band .service-card p{color:rgba(247,239,251,.72);}
 .band .card:hover, .band .service-card:hover{border-color:rgba(255,255,255,.32);box-shadow:0 18px 40px rgba(0,0,0,.3);}
+.band.light .card, .band.light .service-card{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.12);}
+.band.light .card h4, .band.light .service-card h3{color:#0A060F;}
+.band.light .card p, .band.light .service-card p{color:#544963;}
 
 /* solid opaque card backing, for legibility over the busier animated bands */
 .band .card.on-white, .band .service-card.on-white{
@@ -798,6 +805,9 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 .split-cols .sc-col ul{list-style:none;margin:14px 0 0;padding:0;}
 .split-cols .sc-col li{padding:5px 0;font-size:.92rem;color:var(--band-fg-soft);}
 .band.light .split-cols .sc-col{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
+.band.light .split-cols .sc-col .tag-label{color:#544963;}
+.band.light .split-cols .sc-col.accent .tag-label{color:var(--accent);}
+.band.light .split-cols .sc-col li{color:#544963;}
 
 /* ---------- branch diagram: one idea expanding into many formats (Social
    Media) — a single-direction tree, visually distinct from the Chat page's
@@ -852,6 +862,7 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 .dual-pipeline .dp-row p{margin:0;font-size:.8rem;color:var(--band-fg-soft);}
 .band.light .dual-pipeline .dp-step{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
 .band.light .dual-pipeline .dp-row p{color:#544963;}
+.band.light .dual-pipeline .dp-row.human .lbl{color:#8C7F98;}
 
 /* ---------- illustrative timeline: two parallel time-stamped sequences
    (without automation / connected system) — explicitly labeled as an
