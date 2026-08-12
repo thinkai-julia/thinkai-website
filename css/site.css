@@ -352,8 +352,7 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 /* grid-4 gets a 2-column tablet stop instead of jumping straight to 1 —
    four short cards (or eight service cards) read cleanly as 2x2 or 4x2,
    never as an odd 3-then-remainder split. */
-@media (max-width:860px){.grid-4{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:520px){.grid-4{grid-template-columns:1fr;}}
+@media (max-width:860px){.grid-4{grid-template-columns:1fr;}}
 
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;
@@ -393,8 +392,7 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 
 .process{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px;margin-top:10px;}
 .process.cols-3{grid-template-columns:repeat(3,1fr);column-gap:96px;}
-@media (max-width:860px){.process{grid-template-columns:1fr;}.process.cols-3{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:520px){.process.cols-3{grid-template-columns:1fr;}}
+@media (max-width:860px){.process,.process.cols-3{grid-template-columns:1fr;}}
 .process .step .n{font-family:'Fraunces',serif;color:var(--blush);font-size:1.5rem;}
 .process .step h4{margin-top:10px;font-size:1.02rem;}
 .process .step p{color:var(--soft);font-size:.9rem;margin-top:6px;}
@@ -414,8 +412,7 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .flow-diagram.cols-5{grid-template-columns:repeat(5,1fr);}
 .flow-diagram.cols-center{display:flex;flex-wrap:wrap;justify-content:center;}
 .flow-diagram.cols-center .flow-step{flex:0 1 250px;}
-@media (max-width:860px){.flow-diagram{grid-template-columns:repeat(2,1fr);}.flow-diagram.cols-5{grid-template-columns:1fr;}}
-@media (max-width:520px){.flow-diagram{grid-template-columns:1fr;}.flow-diagram.cols-center .flow-step{flex-basis:100%;}}
+@media (max-width:860px){.flow-diagram,.flow-diagram.cols-3,.flow-diagram.cols-5{grid-template-columns:1fr;}.flow-diagram.cols-center .flow-step{flex-basis:100%;}}
 .flow-diagram .flow-step{
   background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
   border-radius:14px;padding:20px 18px;min-width:0;
