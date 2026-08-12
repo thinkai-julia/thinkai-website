@@ -398,7 +398,10 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .process{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px;margin-top:10px;}
 .process.cols-3{grid-template-columns:repeat(3,1fr);column-gap:96px;}
 .process.cols-4{grid-template-columns:repeat(4,1fr);}
-@media (max-width:860px){.process,.process.cols-3{grid-template-columns:1fr;}}
+/* homepage's 7-step process: 4 then 3 on desktop, straight to a single
+   column on mobile — no 2-column tablet stop, unlike .cols-4. */
+.process.cols-4-3{grid-template-columns:repeat(4,1fr);}
+@media (max-width:860px){.process,.process.cols-3,.process.cols-4-3{grid-template-columns:1fr;}}
 @media (max-width:980px){.process.cols-4{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:520px){.process.cols-4{grid-template-columns:1fr;}}
 .process .step .n{font-family:'Fraunces',serif;color:var(--blush);font-size:1.5rem;}
