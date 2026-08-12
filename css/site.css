@@ -308,14 +308,13 @@ body{
 .hud-chip .dot{width:6px;height:6px;border-radius:50%;background:#7CF29C;box-shadow:0 0 8px #7CF29C;animation:pulseDot 2s ease-in-out infinite;}
 @keyframes pulseDot{0%,100%{opacity:1;}50%{opacity:.35;}}
 @media (prefers-reduced-motion: reduce){.hud-chip .dot{animation:none;}}
-/* Homepage-hero-only badge: floats bottom-left over the video on desktop, same as before. */
-.hero-hud-chip{position:absolute;bottom:56px;left:0;}
-/* On mobile the hero's flowed content (headline + long copy + wrapped buttons) can run
-   taller than the section, so a bottom-anchored absolute chip collides with the button
-   row underneath it. Drop it back into normal flow instead of fighting for the same spot. */
-@media (max-width:640px){
-  .hero-hud-chip{position:static;display:inline-flex;margin-top:24px;}
-}
+/* Homepage-hero-only badge. Used to float bottom-left via position:absolute, but that
+   measures from hero-content's own box — which is sized to its in-flow content only
+   (the chip is out of flow), so "bottom:56px" could land the chip on top of the button
+   row whenever the flowed content was short enough. Flowing it in normal document order,
+   right after the buttons, is simple and never collides regardless of content length
+   or viewport width. */
+.hero-hud-chip{position:static;display:inline-flex;margin-top:24px;}
 
 .scanline{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
 .scanline::before{
