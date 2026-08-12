@@ -107,14 +107,19 @@
 
     <div>
       <form class="real-form light-fields" style="background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;">
-        <input type="text" name="fullName" data-label="Full name" placeholder="Full name" required style="background:var(--mist);border-color:var(--line);color:var(--ink);">
+        <label for="f-fullname" class="sr-only">Full name</label>
+        <input id="f-fullname" type="text" name="fullName" data-label="Full name" placeholder="Full name" required style="background:var(--mist);border-color:var(--line);color:var(--ink);">
         <div class="row2">
-          <input type="text" name="business" data-label="Business name" placeholder="Business name" required style="background:var(--mist);border-color:var(--line);color:var(--ink);">
-          <input type="text" name="website" data-label="Website" placeholder="Website (optional)" style="background:var(--mist);border-color:var(--line);color:var(--ink);">
+          <label for="f-business" class="sr-only">Business name</label>
+        <input id="f-business" type="text" name="business" data-label="Business name" placeholder="Business name" required style="background:var(--mist);border-color:var(--line);color:var(--ink);">
+          <label for="f-website" class="sr-only">Website</label>
+        <input id="f-website" type="text" name="website" data-label="Website" placeholder="Website (optional)" style="background:var(--mist);border-color:var(--line);color:var(--ink);">
         </div>
         <div class="row2">
-          <input type="email" name="email" data-label="Email" placeholder="Email" required style="background:var(--mist);border-color:var(--line);color:var(--ink);">
-          <input type="tel" name="phone" data-label="Phone" placeholder="Phone" required style="background:var(--mist);border-color:var(--line);color:var(--ink);">
+          <label for="f-email" class="sr-only">Email</label>
+        <input id="f-email" type="email" name="email" data-label="Email" placeholder="Email" required style="background:var(--mist);border-color:var(--line);color:var(--ink);">
+          <label for="f-phone" class="sr-only">Phone</label>
+        <input id="f-phone" type="tel" name="phone" data-label="Phone" placeholder="Phone" required style="background:var(--mist);border-color:var(--line);color:var(--ink);">
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin:6px 0;">
           <label style="font-size:.85rem;color:var(--soft);display:flex;gap:6px;align-items:center;"><input type="checkbox" name="services" data-label="Services interested in" value="AI Phone Agents" style="width:auto;">AI Phone Agents</label>
@@ -126,14 +131,16 @@
           <label style="font-size:.85rem;color:var(--soft);display:flex;gap:6px;align-items:center;"><input type="checkbox" name="services" data-label="Services interested in" value="Sales Automation" style="width:auto;">Sales Automation</label>
           <label style="font-size:.85rem;color:var(--soft);display:flex;gap:6px;align-items:center;"><input type="checkbox" name="services" data-label="Services interested in" value="Business Systems" style="width:auto;">Business Systems</label>
         </div>
-        <select name="budget" data-label="Budget range" style="background:var(--mist);border-color:var(--line);color:var(--ink);">
+        <label for="f-budget" class="sr-only">Budget range</label>
+        <select id="f-budget" name="budget" data-label="Budget range" style="background:var(--mist);border-color:var(--line);color:var(--ink);">
           <option value="">Budget range (optional)</option>
           <option>Under $2,000/mo</option>
           <option>$2,000 – $5,000/mo</option>
           <option>$5,000 – $10,000/mo</option>
           <option>$10,000+/mo</option>
         </select>
-        <textarea rows="4" name="message" data-label="Message" placeholder="Tell us where growth feels stuck right now" style="background:var(--mist);border-color:var(--line);color:var(--ink);resize:vertical;"></textarea>
+        <label for="f-message" class="sr-only">Message</label>
+        <textarea id="f-message" rows="4" name="message" data-label="Message" placeholder="Tell us where growth feels stuck right now" style="background:var(--mist);border-color:var(--line);color:var(--ink);resize:vertical;"></textarea>
         <button type="submit" style="background:linear-gradient(120deg,var(--accent),var(--accent-soft));color:#fff;">Send &amp; Book a Time</button>
       </form>
       <div class="form-success" style="color:var(--soft);">Thank you. Your message has been sent &mdash; you'll hear from a strategist within one business day.</div>

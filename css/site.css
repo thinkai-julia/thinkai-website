@@ -558,6 +558,7 @@ footer.dark{background:var(--chrome-purple) !important;}
 @media (max-width:860px){.form-grid{grid-template-columns:1fr;}}
 .form-module h2{color:var(--band-fg);font-size:clamp(1.4rem,2.6vw,2rem);}
 .form-module p{color:var(--band-fg-soft);}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 .real-form{display:flex;flex-direction:column;gap:12px;}
 .real-form input, .real-form select, .real-form textarea{
   background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.22);border-radius:10px;

@@ -194,16 +194,22 @@
       </div>
       <div>
         <form class="real-form">
-          <input type="text" name="fullName" data-label="Full name" placeholder="Full name" required>
+          <label for="f-fullname" class="sr-only">Full name</label>
+        <input id="f-fullname" type="text" name="fullName" data-label="Full name" placeholder="Full name" required>
           <div class="row2">
-            <input type="text" name="business" data-label="Business name" placeholder="Business name" required>
-            <input type="text" name="website" data-label="Website" placeholder="Website (optional)">
+            <label for="f-business" class="sr-only">Business name</label>
+        <input id="f-business" type="text" name="business" data-label="Business name" placeholder="Business name" required>
+            <label for="f-website" class="sr-only">Website</label>
+        <input id="f-website" type="text" name="website" data-label="Website" placeholder="Website (optional)">
           </div>
           <div class="row2">
-            <input type="email" name="email" data-label="Email" placeholder="Email" required>
-            <input type="tel" name="phone" data-label="Phone" placeholder="Phone" required>
+            <label for="f-email" class="sr-only">Email</label>
+        <input id="f-email" type="email" name="email" data-label="Email" placeholder="Email" required>
+            <label for="f-phone" class="sr-only">Phone</label>
+        <input id="f-phone" type="tel" name="phone" data-label="Phone" placeholder="Phone" required>
           </div>
-          <select name="goal" data-label="What are you hoping to grow?">
+          <label for="f-goal" class="sr-only">What are you hoping to grow?</label>
+        <select id="f-goal" name="goal" data-label="What are you hoping to grow?">
             <option value="">What are you hoping to grow?</option>
             <option>Leads</option>
             <option>Bookings</option>
