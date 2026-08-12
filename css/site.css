@@ -381,7 +381,7 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
    generic .band p rule so it doesn't inherit near-white text meant for the black bg */
 .band.light .integration-note p, .band.flat .integration-note p{color:var(--soft);}
 
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:10px;}
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px;margin-top:10px;}
 @media (max-width:860px){.process{grid-template-columns:1fr;}}
 .process .step .n{font-family:'Fraunces',serif;color:var(--blush);font-size:1.5rem;}
 .process .step h4{margin-top:10px;font-size:1.02rem;}
@@ -389,6 +389,47 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .process .step h4{color:var(--ink);}
 .band.flat .process .step h4{color:var(--band-fg);}
 .band.flat .process .step p{color:var(--band-fg-soft);}
+
+/* ---------- flow diagram: linear pipeline of connected steps (call flows,
+   ad funnels, pipelines) — a horizontal chain on desktop, stacked on mobile ---------- */
+.flow-diagram{display:flex;align-items:stretch;gap:0;margin-top:32px;flex-wrap:wrap;position:relative;z-index:1;}
+.flow-diagram .flow-step{
+  flex:1 1 150px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;padding:20px 18px;min-width:0;
+}
+.flow-diagram .flow-step .n{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;}
+.flow-diagram .flow-step h4{margin-top:8px;font-size:.98rem;}
+.flow-diagram .flow-step p{margin-top:6px;font-size:.82rem;color:var(--band-fg-soft);line-height:1.45;}
+.flow-diagram .flow-arrow{display:flex;align-items:center;justify-content:center;flex:0 0 30px;color:var(--accent);font-size:1.1rem;opacity:.7;}
+.band.light .flow-diagram .flow-step{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.1);}
+.band.light .flow-diagram .flow-step h4{color:#0A060F;}
+.band.light .flow-diagram .flow-step p{color:#544963;}
+@media (max-width:760px){
+  .flow-diagram{flex-direction:column;}
+  .flow-diagram .flow-arrow{transform:rotate(90deg);flex:0 0 26px;}
+}
+
+/* ---------- converging channels into one layer (AI Chat & Messaging) ---------- */
+.converge{margin-top:32px;position:relative;z-index:1;}
+.converge .channels{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.converge .channel-chip{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:999px;
+  padding:9px 18px;font-size:.8rem;font-family:'IBM Plex Mono',monospace;letter-spacing:.02em;color:var(--band-fg-soft);
+}
+.band.light .converge .channel-chip{background:rgba(24,15,36,.04);border-color:rgba(24,15,36,.12);color:#544963;}
+.converge .converge-line{width:1px;height:26px;background:linear-gradient(var(--accent),transparent);margin:4px auto;opacity:.6;}
+.converge .layer-box{
+  max-width:440px;margin:0 auto;text-align:center;background:linear-gradient(120deg,var(--accent),var(--accent-soft));
+  color:#fff;border-radius:16px;padding:18px 26px;font-family:'Fraunces',serif;font-weight:600;font-size:1.08rem;
+  box-shadow:0 16px 34px rgba(193,63,224,.28);
+}
+
+/* ---------- deliverables checklist ("what you actually get") ---------- */
+.deliverables{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:13px 30px;position:relative;z-index:1;}
+@media (max-width:700px){.deliverables{grid-template-columns:1fr;}}
+.deliverables li{display:flex;gap:11px;align-items:flex-start;font-size:.94rem;color:var(--band-fg-soft);line-height:1.4;}
+.deliverables li::before{content:"✓";flex:none;color:var(--accent);font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:.82rem;margin-top:2px;}
+.band.light .deliverables li{color:#544963;}
 
 /* ---------- capability stat strip (what the system does, not claimed results —
    no fabricated performance numbers, per brand voice guide) ---------- */
