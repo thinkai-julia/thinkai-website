@@ -926,7 +926,7 @@ footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,23
 /* ---------- photo band: a full-bleed real-photo section (not a hero, not an
    img-slot) with a scrim so text stays readable over it. ---------- */
 .photo-band{position:relative;overflow:hidden;min-height:400px;display:flex;align-items:center;}
-.photo-band img.pb-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+.photo-band img.pb-bg,.photo-band video.pb-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
 .photo-band .pb-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,3,8,.82) 0%,rgba(5,3,8,.5) 55%,rgba(5,3,8,.2) 100%);}
 .photo-band .wrap{position:relative;z-index:2;}
 @media (max-width:700px){.photo-band{min-height:460px;}.photo-band .pb-scrim{background:linear-gradient(180deg,rgba(5,3,8,.4) 0%,rgba(5,3,8,.85) 65%);}}
