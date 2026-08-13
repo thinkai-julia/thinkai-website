@@ -384,6 +384,12 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .feature-list li strong{color:var(--ink);}
 .band.flat .feature-list li{color:var(--band-fg-soft);}
 .band.flat .feature-list li strong{color:var(--band-fg);}
+
+/* ---------- legal-copy: long-form prose for Privacy/Terms pages ---------- */
+.legal-copy p{line-height:1.7;margin-top:14px;}
+.legal-copy h3{font-size:1.15rem;margin-top:36px;}
+.legal-copy .feature-list{margin-top:14px;}
+.legal-copy > p:first-child{margin-top:0;}
 /* hardcoded, not var(--soft): .band.light's bg is fixed white regardless of OS theme, but
    --soft flips light in dark mode — same bug class as the h1-h4/p fix above */
 .band.light .feature-list li{color:#544963;}
@@ -698,6 +704,9 @@ footer.dark p, footer.dark a, footer.dark span{color:rgba(247,239,251,.78);}
 footer.dark a:hover{color:#fff;}
 .foot-bottom{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:var(--faint);}
 footer.dark .foot-bottom{border-top-color:rgba(255,255,255,.1);color:rgba(247,239,251,.5);}
+.foot-legal{display:flex;align-items:center;gap:8px;}
+.foot-legal a{display:inline;padding:0;color:inherit;}
+.foot-legal a:not(:last-child)::after{content:"·";margin-left:8px;opacity:.6;}
 
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
 .reveal.is-in{opacity:1;transform:translateY(0);}
