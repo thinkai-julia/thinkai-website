@@ -2,7 +2,11 @@
   var toggle = document.querySelector('.mobile-toggle');
   var panel = document.querySelector('.mobile-panel');
   if (toggle && panel){
-    toggle.addEventListener('click', function(){ panel.classList.toggle('open'); });
+    toggle.addEventListener('click', function(){
+      var open = panel.classList.toggle('open');
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
   }
 
   // Mark the current page's nav link(s) active — service subpages also light up the
