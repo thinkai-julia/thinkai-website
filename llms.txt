@@ -22,6 +22,11 @@ ThinkAI is human-led: strategy, judgment, and creative direction come from peopl
 - [FAQ](https://www.thinkai.team/faq.html): Answers to common questions about pricing, process, AI oversight, and how ThinkAI differs from software/automation tools.
 - [Contact](https://www.thinkai.team/contact.html): How to reach ThinkAI and book a strategy call.
 
+## Blog
+
+- [Blog](https://www.thinkai.team/blog/): Practical articles on AI, automation, and growth for service businesses.
+- [Does Your Business Actually Need AI?](https://www.thinkai.team/blog/does-your-business-need-ai/): How to tell whether AI solves a real problem your business has, versus following the hype.
+
 ## Policies
 
 - [Privacy Policy](https://www.thinkai.team/privacy.html)

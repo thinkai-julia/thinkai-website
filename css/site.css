@@ -390,11 +390,22 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .band.flat .feature-list li{color:var(--band-fg-soft);}
 .band.flat .feature-list li strong{color:var(--band-fg);}
 
-/* ---------- legal-copy: long-form prose for Privacy/Terms pages ---------- */
-.legal-copy p{line-height:1.7;margin-top:14px;}
-.legal-copy h3{font-size:1.15rem;margin-top:36px;}
-.legal-copy .feature-list{margin-top:14px;}
-.legal-copy > p:first-child{margin-top:0;}
+/* ---------- legal-copy: long-form prose for Privacy/Terms/Blog pages ---------- */
+.legal-copy p, .article-copy p{line-height:1.7;margin-top:14px;}
+.legal-copy h3, .article-copy h2{font-size:1.15rem;margin-top:36px;}
+.legal-copy .feature-list, .article-copy .feature-list{margin-top:14px;}
+.legal-copy > p:first-child, .article-copy > p:first-child{margin-top:0;}
+.article-copy ul{margin-top:14px;padding-left:22px;}
+.article-copy li{line-height:1.6;margin-top:8px;}
+.band.light .article-copy li{color:#544963;}
+.band.light .article-copy li strong{color:#0A060F;}
+
+.blog-list{display:flex;flex-direction:column;gap:22px;}
+.blog-list-item{display:block;padding:26px 28px;border-radius:16px;border:1px solid rgba(24,15,36,.1);text-decoration:none;transition:border-color .2s ease,transform .2s ease;}
+.blog-list-item:hover{border-color:var(--accent);transform:translateY(-2px);}
+.blog-list-item h2{font-size:1.3rem;}
+.blog-list-item p{color:#544963;}
+.blog-list-item .tag{color:var(--accent);font-size:.85rem;font-weight:600;}
 /* hardcoded, not var(--soft): .band.light's bg is fixed white regardless of OS theme, but
    --soft flips light in dark mode — same bug class as the h1-h4/p fix above */
 .band.light .feature-list li{color:#544963;}
