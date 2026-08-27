@@ -1,0 +1,28 @@
+# ThinkAI
+
+> ThinkAI is an AI growth studio for service businesses. It combines human strategy, creative direction, and AI-powered automation into one connected system covering marketing, sales, and operations — rather than selling AI as a standalone product.
+
+ThinkAI is human-led: strategy, judgment, and creative direction come from people; AI is used to execute at scale (phone and chat agents, marketing automation, sales follow-up, business-process automation). The company is based in Port Richey, Florida, and works with service businesses across the US, remotely.
+
+## Services
+
+- [Services overview](https://www.thinkai.team/services/): All 8 services and how they connect into one growth system.
+- [AI Phone Agents](https://www.thinkai.team/services/ai-phone-agents/): AI-handled inbound/outbound phone calls — answering, qualifying, booking, with human escalation for exceptions.
+- [AI Chat & Messaging Agents](https://www.thinkai.team/services/ai-chat-messaging-agents/): AI-handled chat and messaging conversations across web, SMS, and social channels.
+- [Marketing & Growth Strategy](https://www.thinkai.team/services/marketing-growth-strategy/): Positioning, channel strategy, and growth planning grounded in the business, not templates.
+- [Paid Advertising](https://www.thinkai.team/services/paid-advertising/): Paid ad campaign strategy and management across search and social platforms.
+- [Social Media Management](https://www.thinkai.team/services/social-media-management/): Content strategy and production combining human creative direction with AI-assisted production.
+- [Website Development](https://www.thinkai.team/services/website-development/): Custom website design and development for service businesses.
+- [Sales Automation](https://www.thinkai.team/services/sales-automation/): Automated lead follow-up, CRM workflows, and sales-process automation.
+- [Business Systems & Process Automation](https://www.thinkai.team/services/business-systems/): Internal workflow and operations automation beyond sales and marketing.
+
+## Company
+
+- [About](https://www.thinkai.team/about.html): Who ThinkAI is, the founder's background, and the human-led philosophy behind the work.
+- [FAQ](https://www.thinkai.team/faq.html): Answers to common questions about pricing, process, AI oversight, and how ThinkAI differs from software/automation tools.
+- [Contact](https://www.thinkai.team/contact.html): How to reach ThinkAI and book a strategy call.
+
+## Policies
+
+- [Privacy Policy](https://www.thinkai.team/privacy.html)
+- [Terms of Service](https://www.thinkai.team/terms.html)
