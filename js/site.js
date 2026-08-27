@@ -240,15 +240,16 @@
     });
   });
 
-  // Conversion event hooks — pushes to window.dataLayer, the convention GTM/GA4
-  // already listen for, so wiring up real analytics later is a config change,
-  // not another pass through the markup. No tracking IDs are set up here.
+  // Conversion event hooks — pushes to window.dataLayer (the GTM convention)
+  // and, when gtag.js is loaded (see the per-page GA4 snippet), also fires a
+  // real GA4 event via gtag('event', ...) so these show up in Analytics.
   (function(){
     window.dataLayer = window.dataLayer || [];
     function track(event, data){
       var payload = { event: event };
       for (var k in data) if (data.hasOwnProperty(k)) payload[k] = data[k];
       window.dataLayer.push(payload);
+      if (window.gtag) window.gtag('event', event, data || {});
     }
     window.thinkaiTrack = track;
 
