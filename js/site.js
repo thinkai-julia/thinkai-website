@@ -207,7 +207,7 @@
       });
 
       var pageName = document.title.split('|')[0].trim() || 'ThinkAI';
-      var subject = 'Strategy call request — ' + pageName + ' page';
+      var subject = 'Strategy call request - ' + pageName + ' page';
       var nameField = form.querySelector('input[name="fullName"]');
       var emailField = form.querySelector('input[type="email"]');
 

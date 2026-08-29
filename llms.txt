@@ -1,13 +1,13 @@
 # ThinkAI
 
-> ThinkAI is an AI growth studio for service businesses. It combines human strategy, creative direction, and AI-powered automation into one connected system covering marketing, sales, and operations — rather than selling AI as a standalone product.
+> ThinkAI is an AI growth studio for service businesses. It combines human strategy, creative direction, and AI-powered automation into one connected system covering marketing, sales, and operations - rather than selling AI as a standalone product.
 
 ThinkAI is human-led: strategy, judgment, and creative direction come from people; AI is used to execute at scale (phone and chat agents, marketing automation, sales follow-up, business-process automation). The company is based in Port Richey, Florida, and works with service businesses across the US, remotely.
 
 ## Services
 
 - [Services overview](https://www.thinkai.team/services/): All 8 services and how they connect into one growth system.
-- [AI Phone Agents](https://www.thinkai.team/services/ai-phone-agents/): AI-handled inbound/outbound phone calls — answering, qualifying, booking, with human escalation for exceptions.
+- [AI Phone Agents](https://www.thinkai.team/services/ai-phone-agents/): AI-handled inbound/outbound phone calls - answering, qualifying, booking, with human escalation for exceptions.
 - [AI Chat & Messaging Agents](https://www.thinkai.team/services/ai-chat-messaging-agents/): AI-handled chat and messaging conversations across web, SMS, and social channels.
 - [Marketing & Growth Strategy](https://www.thinkai.team/services/marketing-growth-strategy/): Positioning, channel strategy, and growth planning grounded in the business, not templates.
 - [Paid Advertising](https://www.thinkai.team/services/paid-advertising/): Paid ad campaign strategy and management across search and social platforms.
@@ -27,13 +27,13 @@ ThinkAI is human-led: strategy, judgment, and creative direction come from peopl
 - [Blog](https://www.thinkai.team/blog/): Practical articles on AI, automation, and growth for service businesses.
 - [Does Your Business Actually Need AI?](https://www.thinkai.team/blog/does-your-business-need-ai/): How to tell whether AI solves a real problem your business has, versus following the hype.
 - [The Signs Your Team Is Drowning in Repetitive Work](https://www.thinkai.team/blog/signs-your-team-is-drowning-in-repetitive-work/): Repetitive work is easy to normalize because it's always been there. A few signs make it visible.
-- [A Practical Way to Evaluate Any AI Tool Before You Buy It](https://www.thinkai.team/blog/how-to-evaluate-an-ai-tool/): With hundreds of AI tools available, picking the right one comes down to a short, practical checklist — not the flashiest demo.
+- [A Practical Way to Evaluate Any AI Tool Before You Buy It](https://www.thinkai.team/blog/how-to-evaluate-an-ai-tool/): With hundreds of AI tools available, picking the right one comes down to a short, practical checklist - not the flashiest demo.
 - [How to Build a Growth System Instead of Eight Disconnected Tools](https://www.thinkai.team/blog/growth-system-not-eight-tools/): Buying tools one problem at a time tends to produce a pile of tools. Building a system is a different exercise.
 - [What Actually Happens During a Strategy Call (And Why We Start There)](https://www.thinkai.team/blog/what-happens-on-a-strategy-call/): No pitch deck, no pre-built package. Here's what a strategy call is actually for.
 - [The Real Difference Between Automation and Intelligence](https://www.thinkai.team/blog/automation-vs-intelligence/): Automating a task and making a decision intelligently are not the same thing, and mixing them up leads to bad system design.
 - [How Much Should AI Actually Cost a Small Service Business?](https://www.thinkai.team/blog/how-much-should-ai-cost/): There's no single number, and anyone offering one without knowing the scope is guessing.
 - [What Businesses Get Wrong About AI Chatbots](https://www.thinkai.team/blog/what-businesses-get-wrong-about-ai-chatbots/): Most chatbot disappointment traces back to a handful of avoidable mistakes, not the technology itself.
-- [Five Signs Your Website Is Quietly Losing You Customers](https://www.thinkai.team/blog/signs-your-website-is-losing-customers/): A website can look fine and still be losing business — just not in a way that shows up unless you're looking for it.
+- [Five Signs Your Website Is Quietly Losing You Customers](https://www.thinkai.team/blog/signs-your-website-is-losing-customers/): A website can look fine and still be losing business - just not in a way that shows up unless you're looking for it.
 - [Paid Ads Aren't Broken. Your Follow-Up Is.](https://www.thinkai.team/blog/paid-ads-follow-up-problem/): A lot of "our ads don't work" problems are actually follow-up problems wearing an ad-performance costume.
 - [The Hidden Cost of Running Marketing, Sales, and Operations as Separate Systems](https://www.thinkai.team/blog/cost-of-disconnected-systems/): Disconnected tools don't just create extra work. They quietly lose opportunities in the gaps between them.
 - [Why "More Content" Isn't the Same as "Better Marketing"](https://www.thinkai.team/blog/more-content-not-better-marketing/): AI made it cheap to produce more content. It didn't make more content the answer.
@@ -44,7 +44,7 @@ ThinkAI is human-led: strategy, judgment, and creative direction come from peopl
 
 ## Resources
 
-- [AI Tools Directory](https://www.thinkai.team/ai-tools/): A curated, growing directory of real AI tools by category — chat assistants, phone/voice agents, content, image/video generation, marketing, sales, automation, productivity, website builders, research, and legal/finance.
+- [AI Tools Directory](https://www.thinkai.team/ai-tools/): A curated, growing directory of real AI tools by category - chat assistants, phone/voice agents, content, image/video generation, marketing, sales, automation, productivity, website builders, research, and legal/finance.
 
 ## Policies
 
