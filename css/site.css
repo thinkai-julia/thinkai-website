@@ -418,7 +418,7 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .band.light .tool-card p{color:#544963;}
 .band.flat .tool-card p{color:var(--band-fg-soft);}
 .tool-card .tool-head{display:flex;align-items:center;flex-wrap:wrap;gap:7px;}
-.badge-free{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:3px 8px;border-radius:20px;background:#DCFCE7;color:#15803D;white-space:nowrap;}
+.badge-free{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:3px 8px;border-radius:20px;background:#F9D9EF;color:#A31C9C;white-space:nowrap;}
 
 .tool-subcat{margin-top:34px;}
 .tool-subcat:first-child{margin-top:24px;}
