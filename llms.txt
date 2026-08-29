@@ -26,6 +26,21 @@ ThinkAI is human-led: strategy, judgment, and creative direction come from peopl
 
 - [Blog](https://www.thinkai.team/blog/): Practical articles on AI, automation, and growth for service businesses.
 - [Does Your Business Actually Need AI?](https://www.thinkai.team/blog/does-your-business-need-ai/): How to tell whether AI solves a real problem your business has, versus following the hype.
+- [The Signs Your Team Is Drowning in Repetitive Work](https://www.thinkai.team/blog/signs-your-team-is-drowning-in-repetitive-work/): Repetitive work is easy to normalize because it's always been there. A few signs make it visible.
+- [A Practical Way to Evaluate Any AI Tool Before You Buy It](https://www.thinkai.team/blog/how-to-evaluate-an-ai-tool/): With hundreds of AI tools available, picking the right one comes down to a short, practical checklist — not the flashiest demo.
+- [How to Build a Growth System Instead of Eight Disconnected Tools](https://www.thinkai.team/blog/growth-system-not-eight-tools/): Buying tools one problem at a time tends to produce a pile of tools. Building a system is a different exercise.
+- [What Actually Happens During a Strategy Call (And Why We Start There)](https://www.thinkai.team/blog/what-happens-on-a-strategy-call/): No pitch deck, no pre-built package. Here's what a strategy call is actually for.
+- [The Real Difference Between Automation and Intelligence](https://www.thinkai.team/blog/automation-vs-intelligence/): Automating a task and making a decision intelligently are not the same thing, and mixing them up leads to bad system design.
+- [How Much Should AI Actually Cost a Small Service Business?](https://www.thinkai.team/blog/how-much-should-ai-cost/): There's no single number, and anyone offering one without knowing the scope is guessing.
+- [What Businesses Get Wrong About AI Chatbots](https://www.thinkai.team/blog/what-businesses-get-wrong-about-ai-chatbots/): Most chatbot disappointment traces back to a handful of avoidable mistakes, not the technology itself.
+- [Five Signs Your Website Is Quietly Losing You Customers](https://www.thinkai.team/blog/signs-your-website-is-losing-customers/): A website can look fine and still be losing business — just not in a way that shows up unless you're looking for it.
+- [Paid Ads Aren't Broken. Your Follow-Up Is.](https://www.thinkai.team/blog/paid-ads-follow-up-problem/): A lot of "our ads don't work" problems are actually follow-up problems wearing an ad-performance costume.
+- [The Hidden Cost of Running Marketing, Sales, and Operations as Separate Systems](https://www.thinkai.team/blog/cost-of-disconnected-systems/): Disconnected tools don't just create extra work. They quietly lose opportunities in the gaps between them.
+- [Why "More Content" Isn't the Same as "Better Marketing"](https://www.thinkai.team/blog/more-content-not-better-marketing/): AI made it cheap to produce more content. It didn't make more content the answer.
+- [The Difference Between a Chatbot and an AI Agent (and Why It Matters)](https://www.thinkai.team/blog/chatbot-vs-ai-agent/): The terms get used interchangeably, but they describe genuinely different things. Here's the practical difference.
+- [AI Phone Agents vs. Hiring a Receptionist: What Actually Changes](https://www.thinkai.team/blog/ai-phone-agents-vs-receptionist/): It's not really AI vs. human. Here's what actually changes when a phone agent handles the first response, and what doesn't.
+- [Why Strategy Always Comes Before Software](https://www.thinkai.team/blog/strategy-before-software/): Buying the tool first and figuring out the plan later is backwards. Here's why the order actually matters.
+- [How to Tell If Your Business Process Is Actually Ready to Automate](https://www.thinkai.team/blog/is-your-process-ready-to-automate/): Automating a process before it's stable just makes the mess move faster. Here's how to tell whether a process is actually ready for automation.
 
 ## Resources
 
