@@ -27,6 +27,10 @@ ThinkAI is human-led: strategy, judgment, and creative direction come from peopl
 - [Blog](https://www.thinkai.team/blog/): Practical articles on AI, automation, and growth for service businesses.
 - [Does Your Business Actually Need AI?](https://www.thinkai.team/blog/does-your-business-need-ai/): How to tell whether AI solves a real problem your business has, versus following the hype.
 
+## Resources
+
+- [AI Tools Directory](https://www.thinkai.team/ai-tools/): A curated, growing directory of real AI tools by category — chat assistants, phone/voice agents, content, image/video generation, marketing, sales, automation, productivity, website builders, research, and legal/finance.
+
 ## Policies
 
 - [Privacy Policy](https://www.thinkai.team/privacy.html)
