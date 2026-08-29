@@ -417,13 +417,23 @@ h2.section-title{font-size:clamp(1.5rem,2.8vw,2.15rem);margin-bottom:10px;}
 .band.light .tool-card{border-color:rgba(24,15,36,.1);}
 .band.light .tool-card p{color:#544963;}
 .band.flat .tool-card p{color:var(--band-fg-soft);}
+.tool-card .tool-head{display:flex;align-items:center;flex-wrap:wrap;gap:7px;}
+.badge-free{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:3px 8px;border-radius:20px;background:#DCFCE7;color:#15803D;white-space:nowrap;}
 
-.blog-list{display:flex;flex-direction:column;gap:22px;}
-.blog-list-item{display:block;padding:26px 28px;border-radius:16px;border:1px solid rgba(24,15,36,.1);text-decoration:none;transition:border-color .2s ease,transform .2s ease;}
+.tool-subcat{margin-top:34px;}
+.tool-subcat:first-child{margin-top:24px;}
+.subcat-title{font-size:1.02rem;font-weight:600;margin:0 0 14px;color:var(--accent);}
+.tool-subcat .tools-grid{margin-top:0;}
+
+.blog-list{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+@media (max-width:1100px){.blog-list{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:640px){.blog-list{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:420px){.blog-list{grid-template-columns:1fr;}}
+.blog-list-item{display:flex;flex-direction:column;padding:18px 16px;border-radius:14px;border:1px solid rgba(24,15,36,.1);text-decoration:none;transition:border-color .2s ease,transform .2s ease;}
 .blog-list-item:hover{border-color:var(--accent);transform:translateY(-2px);}
-.blog-list-item h2{font-size:1.3rem;}
-.blog-list-item p{color:#544963;}
-.blog-list-item .tag{color:var(--accent);font-size:.85rem;font-weight:600;}
+.blog-list-item h2{font-size:.94rem;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.blog-list-item p{color:#544963;font-size:.8rem;line-height:1.45;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.blog-list-item .tag{color:var(--accent);font-size:.78rem;font-weight:600;}
 /* hardcoded, not var(--soft): .band.light's bg is fixed white regardless of OS theme, but
    --soft flips light in dark mode — same bug class as the h1-h4/p fix above */
 .band.light .feature-list li{color:#544963;}
