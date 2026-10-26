@@ -25,6 +25,7 @@ ThinkAI is human-led: strategy, judgment, and creative direction come from peopl
 ## Blog
 
 - [Blog](https://www.thinkai.team/blog/): Practical articles on AI, automation, and growth for service businesses.
+- [The Metrics That Actually Tell You If AI Is Working For Your Business](https://www.thinkai.team/blog/metrics-that-tell-you-if-ai-is-working/): Most AI rollouts skip the part where you decide what "working" means. Here are the specific, honest numbers worth tracking instead.
 - [Does Your Business Actually Need AI?](https://www.thinkai.team/blog/does-your-business-need-ai/): How to tell whether AI solves a real problem your business has, versus following the hype.
 - [The Signs Your Team Is Drowning in Repetitive Work](https://www.thinkai.team/blog/signs-your-team-is-drowning-in-repetitive-work/): Repetitive work is easy to normalize because it's always been there. A few signs make it visible.
 - [A Practical Way to Evaluate Any AI Tool Before You Buy It](https://www.thinkai.team/blog/how-to-evaluate-an-ai-tool/): With hundreds of AI tools available, picking the right one comes down to a short, practical checklist - not the flashiest demo.
