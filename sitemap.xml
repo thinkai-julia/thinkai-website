@@ -71,6 +71,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.thinkai.team/blog/questions-to-ask-before-hiring-an-ai-vendor/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.thinkai.team/blog/how-to-design-the-ai-to-human-handoff/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

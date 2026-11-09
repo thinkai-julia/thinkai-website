@@ -25,6 +25,7 @@ ThinkAI is human-led: strategy, judgment, and creative direction come from peopl
 ## Blog
 
 - [Blog](https://www.thinkai.team/blog/): Practical articles on AI, automation, and growth for service businesses.
+- [What to Ask Before You Hire an AI Vendor](https://www.thinkai.team/blog/questions-to-ask-before-hiring-an-ai-vendor/): Every service business is getting pitched AI right now. Here are the questions worth asking before you hire anyone to build it, not after.
 - [How to Design the Handoff Between AI and Your Team](https://www.thinkai.team/blog/how-to-design-the-ai-to-human-handoff/): Adding an AI phone or chat agent means deciding what it should never touch. Here's how to design the handoff so conversations move to a person cleanly, not as a failure.
 - [The Metrics That Actually Tell You If AI Is Working For Your Business](https://www.thinkai.team/blog/metrics-that-tell-you-if-ai-is-working/): Most AI rollouts skip the part where you decide what "working" means. Here are the specific, honest numbers worth tracking instead.
 - [Does Your Business Actually Need AI?](https://www.thinkai.team/blog/does-your-business-need-ai/): How to tell whether AI solves a real problem your business has, versus following the hype.
